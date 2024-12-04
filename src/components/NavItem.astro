@@ -5,7 +5,7 @@ const {href, icon, text} = Astro.props
 ---
 
 <li>
-    <a href={href} class="flex items-center gap-6">
+    <a href={href} class="flex p-4 items-center gap-2 transition-colors rounded-lg hover:bg-green-600">
         <Icon name={icon} />
         {text}
     </a>
