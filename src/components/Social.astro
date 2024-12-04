@@ -1,0 +1,11 @@
+---
+import { Icon } from "astro-icon/components";
+
+const {size, nameIcon, href} = Astro.props
+---
+<a
+class="hover:text-orange-200 hover:scale-105"
+href="https://example.com"
+target="_blank">
+<Icon style={`font-size: ${size}`} name={nameIcon} />
+</a>

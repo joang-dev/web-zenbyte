@@ -1,0 +1,14 @@
+{
+    "name": "Joan Grau",
+    "role": "Director del departamento de producción",
+    "studies": "Ingeniería informática",
+    "softSkills": [
+       "Pasión y vocación por el sector tecnológico",
+        "Empatía",
+        "Disciplina"
+    ],
+    "experience": [
+        {"time": "3 años","work": "de formación autodidacta"},
+        {"time": "1 año","work": "de prácticas en empresas del sector"}
+    ]
+}

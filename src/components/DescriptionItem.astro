@@ -1,17 +1,26 @@
 ---
 import ImageContainer from "./ImageContainer.astro"
-const {img,title,description} = Astro.props
+
+const {featureSection} = Astro.props
+
+interface Section {
+    title: string;
+    img: string;
+    text: string;
+}
+
+const section : Section = await import(`../data/feature-sections/${featureSection}.json`)
 ---
 
 <li>
-    <h4 class="text-orange-300 font-medium mb-4">{title}</h4>
+    <h4 class="text-orange-300 font-medium mb-4">{section.title}</h4>
 
     <div class="md:flex md:gap-8 md:items-center md:justify-around">
         <p class="md:max-w-[50ch]">
-            {description}
+            {section.text}
             <slot />
         </p>
 
-        <ImageContainer src={img} alt="Esta imagen no carga" />
+        <ImageContainer src={section.img} alt="Esta imagen no carga" />
     </div>
 </li>

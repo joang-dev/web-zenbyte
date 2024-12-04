@@ -1,19 +1,15 @@
 ---
 import DescriptionItem from "./DescriptionItem.astro"
-import location from "../data/location.json"
-import duration from "../data/duration.json"
-import programming from "../data/programming.json"
-import sports from "../data/sports.json"
 ---
 
 <ul class="flex flex-col gap-14 pb-4">
-    <DescriptionItem img={location.img} title={location.title} description={location.text} />
+    <DescriptionItem featureSection="location" />
     
-    <DescriptionItem img={duration.img} title={duration.title} description={duration.text}>
+    <DescriptionItem featureSection="duration" >
         <a href="/pricing">Conoce nuestras tarifas</a>
     </DescriptionItem>
 
-    <DescriptionItem img={programming.img} title={programming.title} description={programming.text} />
+    <DescriptionItem featureSection="programming" />
 
-    <DescriptionItem img={sports.img} title={sports.title} description={sports.text} />
+    <DescriptionItem featureSection="sports" />
 </ul>

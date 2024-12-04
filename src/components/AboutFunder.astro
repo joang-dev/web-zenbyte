@@ -1,11 +1,62 @@
 ---
-const {img, funderName} = Astro.props
+import Social from "./Social.astro";
+const iconSize = "1.5rem"
+const socialIcons = [
+    {"size": iconSize, "name": "mdi:instagram"},
+    {"size": iconSize, "name": "mdi:linkedin"},
+    {"size": iconSize, "name": "mdi:github"}
+]
+const {funder} = Astro.props
+interface Experience {
+    time: string;
+    work: string;
+}
+interface Funder {
+    name: string;
+    role: string;
+    studies: string;
+    softSkills: string[];
+    experience: Experience[];
+}
+
+const funderData: Funder = await import(`../data/funders/${funder}-funder.json`)
 ---
 
-<article>
-    <img src={img} alt="Esta imagen no carga">
-    <h2>{funderName}</h2>
-    <ul>
-        
-    </ul>
+<article class="grid gap-4 md:grid-cols-2 md:gap-20 px-4 py-8 border-2 border-orange-200 rounded-lg">
+    <div class="flex flex-col gap-2 md:justify-between">
+        <img class="self-center rounded-full aspect-square max-w-20" src="https://placeholder.co/80" alt="Esta imagen no carga">
+        <h2 class="text-xl md:text-2xl font-semibold text-green-400">{funderData.name}</h2>
+        <h3 class="text-lg text-white/70">{funderData.role}</h3>
+    </div>
+    <div>
+        <p><strong>Estudios: </strong><span>{funderData.studies}</span></p>
+        <div class="flex flex-col gap-4">
+            <ul>
+                {
+                    funderData.softSkills.map((skill) => (
+                        <li>
+                            {skill}
+                        </li>
+                    ))
+                }
+            </ul>
+            <ul>
+                {
+                    funderData.experience.map((experience) => (
+                        <li>
+                            <strong>{experience.time} </strong>
+                            {experience.work}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+        <ul class="mt-6 flex justify-evenly">
+            {
+                socialIcons.map(icon => (
+                    <Social size={icon.size} nameIcon={icon.name}/>
+                ))
+            }
+        </ul>
+    </div>
 </article>

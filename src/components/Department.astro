@@ -1,0 +1,13 @@
+---
+interface Department {
+    departmentName: string;
+    workers: string;
+    description: string;
+    tasks: string[];
+}
+
+const {department} = Astro.props
+const departments : Department = await import(`../data/departments/${department}.json`)
+---
+
+<h1>{departments.departmentName}</h1>

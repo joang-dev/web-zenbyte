@@ -13,12 +13,12 @@ const items = [
 <nav
 id="page-navigation"
 class={`
-show flex justify-center
-py-8 fixed top-20 right-0 size-full bg-stone-800/90
-font-extralight overflow-hidden transition-transform duration-300
+show flex flex-col py-4
+fixed top-20 right-0 bg-stone-800/70 backdrop-blur-sm
+font-extralight transition-transform duration-300
 `
 }>
-    <ul class="flex flex-col overflow-hidden gap-8">
+    <ul class="flex flex-col overflow-y-auto gap-8">
         {
             items.map(item => (
                 <NavItem icon={item.icon} href={item.href} text={item.text} />
@@ -29,7 +29,6 @@ font-extralight overflow-hidden transition-transform duration-300
 
 <style>
     nav {
-        grid-area: nav;
         max-height: calc(100dvh - 80px);
     }
 

@@ -1,0 +1,13 @@
+{
+    "departmentName": "Producción",
+    "director": "Joan Grau",
+    "workers": "x empleados",
+    "description": "Este departamento se encarga de ...",
+    "tasks": [
+        "lorem",
+        "ipsum",
+        "dolor",
+        "sit",
+        "amet"
+    ]
+}

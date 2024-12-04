@@ -1,0 +1,15 @@
+{
+    "name": "Aaron Ribes",
+    "role": "Director general de coordinación",
+    "studies": "Técnico superior en deportes",
+    "softSkills": [
+       "Capacidad de enfoque",
+        "Escucha activa",
+        "Resolución de problemas"
+    ],
+    "experience": [
+        {"time": "2 años","work": "de monitor infantil"},
+        {"time": "2 meses","work": "de profesor de tenis en verano"},
+        {"time": "3 meses","work": "de Erasmus+ en Chipre"}
+    ]
+}

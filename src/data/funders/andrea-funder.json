@@ -1,0 +1,15 @@
+{
+    "name": "Andrea Plauskaite",
+    "role": "Directora del departamento de finanzas",
+    "studies": "Grado en ADE. Máster de economía",
+    "softSkills": [
+       "Pensaminiento individual",
+        "Originalidad",
+        "Resiliencia"
+    ],
+    "experience": [
+        {"time": "2 años","work": "dirigiendo el departamento de finanzas de Zenbyte"},
+        {"time": "5 meses","work": "de coach personal para la autoadministración"},
+        {"time": "2 años","work": "dirigiendo las cuentas del Sushi Room Cullera"}
+    ]
+}
