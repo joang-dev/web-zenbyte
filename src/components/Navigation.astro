@@ -1,0 +1,39 @@
+---
+import NavItem from "./NavItem.astro"
+
+const items = [
+    {icon: "mdi:home", href: "/", text: "Inicio"},
+    {icon: "mdi:people-group", href: "/about", text: "Sobre nosotros"},
+    {icon: "mdi:workflow", href: "/departments", text: "Departamentos"},
+    {icon: "mdi:dollar", href: "/pricing", text: "Tarifas"},
+    {icon: "mdi:super-chat-for-good", href: "/rsc", text: "Responsabilidad Social"}
+]
+---
+
+<nav
+id="page-navigation"
+class={`
+show
+px-4 py-8 flex justify-center fixed top-20 size-full bg-stone-800/90
+font-extralight overflow-hidden transition-transform duration-300
+`
+}>
+    <ul class="flex flex-col overflow-hidden gap-8">
+        {
+            items.map(item => (
+                <NavItem icon={item.icon} href={item.href} text={item.text} />
+            ))
+        }
+    </ul>
+</nav>
+
+<style>
+    nav {
+        grid-area: nav;
+        max-height: calc(100dvh - 80px);
+    }
+
+    .show {
+        @apply translate-x-full;
+    }
+</style>

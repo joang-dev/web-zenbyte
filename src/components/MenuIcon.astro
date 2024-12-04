@@ -1,0 +1,18 @@
+---
+import {Icon} from "astro-icon/components"
+---
+
+<Icon
+id="menu-icon"
+class="icon hover:cursor-pointer hover:scale-120 transition-transform text-2xl"
+name="mdi:menu" />
+
+<script>
+    const menuIcon = document.getElementById("menu-icon")
+    const pageNavigation = document.getElementById("page-navigation")
+    if ( menuIcon && pageNavigation) {
+        menuIcon.addEventListener("click", () => {
+            pageNavigation.classList.toggle("show")
+        })
+    }
+</script>

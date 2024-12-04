@@ -1,0 +1,16 @@
+---
+import DescriptionItem from "./DescriptionItem.astro";
+
+const items = [
+    {img: "/public/zenbyte-favicon.webp", title: "Hola mundo", description: "lorem ipsum"},
+    {img: "/public/zenbyte-favicon.webp", title: "Hola mundo", description: "lorem ipsum"}
+]
+---
+
+<ul>
+    {
+        items.map(item => (
+            <DescriptionItem img={item.img} title={item.title} description={item.description} />
+        ) )
+    }
+</ul>

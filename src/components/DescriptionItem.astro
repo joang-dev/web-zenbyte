@@ -1,0 +1,11 @@
+---
+const {img,title,description, src} = Astro.props
+---
+
+<li>
+    <h4>{title}</h4>
+
+    <p>{description}</p>
+
+    <img src={img} alt="Esta imagen no carga">
+</li>
