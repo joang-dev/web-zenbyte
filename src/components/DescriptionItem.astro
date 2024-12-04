@@ -1,11 +1,17 @@
 ---
-const {img,title,description, src} = Astro.props
+import ImageContainer from "./ImageContainer.astro"
+const {img,title,description} = Astro.props
 ---
 
 <li>
-    <h4>{title}</h4>
+    <h4 class="text-orange-300 font-medium mb-4">{title}</h4>
 
-    <p>{description}</p>
+    <div class="md:flex md:items-center md:justify-around">
+        <p class="md:max-w-[50ch]">
+            {description}
+            <slot />
+        </p>
 
-    <img src={img} alt="Esta imagen no carga">
+        <ImageContainer src={img} alt="Esta imagen no carga" />
+    </div>
 </li>

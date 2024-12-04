@@ -1,16 +1,19 @@
 ---
-import DescriptionItem from "./DescriptionItem.astro";
-
-const items = [
-    {img: "/public/zenbyte-favicon.webp", title: "Hola mundo", description: "lorem ipsum"},
-    {img: "/public/zenbyte-favicon.webp", title: "Hola mundo", description: "lorem ipsum"}
-]
+import DescriptionItem from "./DescriptionItem.astro"
+import location from "../data/location.json"
+import duration from "../data/duration.json"
+import programming from "../data/programming.json"
+import sports from "../data/sports.json"
 ---
 
-<ul>
-    {
-        items.map(item => (
-            <DescriptionItem img={item.img} title={item.title} description={item.description} />
-        ) )
-    }
+<ul class="flex flex-col gap-14 pb-4">
+    <DescriptionItem img={location.img} title={location.title} description={location.text} />
+    
+    <DescriptionItem img={duration.img} title={duration.title} description={duration.text}>
+        <a href="/pricing">Conoce nuestras tarifas</a>
+    </DescriptionItem>
+
+    <DescriptionItem img={programming.img} title={programming.title} description={programming.text} />
+
+    <DescriptionItem img={sports.img} title={sports.title} description={sports.text} />
 </ul>

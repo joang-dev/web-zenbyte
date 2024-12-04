@@ -6,11 +6,11 @@ import WhatWeOffer from '../components/WhatWeOffer.astro';
 
 <Layout title="Zenbyte, bienvenido a tu futuro">
 	<main class="flex flex-col gap-14">
-		<section class="hero grid grid-cols-1 auto-rows-min content-evenly px-4">
+		<section class="hero">
 			<h1 class="font-semibold text-2xl">
 				Nuestro Bootcamp: <strong>Tu Futuro</strong>
 			</h1>
-			<ImageContainer src="/public/instagram_content/principal-publish.webp" alt="Esta imagen no carga"/>
+			<ImageContainer divClassName="h-[50%]" src="/public/instagram_content/principal-publish.webp" alt="Esta imagen no carga"/>
 
 			<div class="flex flex-col gap-4">
 			
@@ -25,7 +25,7 @@ import WhatWeOffer from '../components/WhatWeOffer.astro';
 				</a>
 			</div>
 		</section>
-		<section class="px-4">
+		<section>
 			<h3 class="text-2xl font-semibold mb-4">Conócenos un poco más</h3>
 			<p>
 				¡Hola! Somos <strong>Zenbyte</strong>: el bootcamp que te va a llevar al <strong>futuro</strong>.
@@ -39,8 +39,8 @@ import WhatWeOffer from '../components/WhatWeOffer.astro';
 			<ImageContainer src="/public/instagram_content/zen-coder.webp" alt="Esta imagen no carga"/>
 		</section>
 
-		<section class="px-4">
-			<h3 class="text-2xl font-semibold mb-4">¿Qué ofrecemos?</h3>
+		<section>
+			<h3 class="text-2xl font-semibold mb-4">¿Qué <span class="text-green-400">ofrecemos?</span></h3>
 			<!-- <p>
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates architecto provident nemo. Ratione optio inventore repellat dolorem est eos laborum et nobis. Nisi ut aliquam autem iure dicta voluptates voluptas dignissimos ducimus ipsa repellendus natus distinctio architecto provident minima recusandae, et culpa possimus quaerat earum placeat commodi? Totam nihil ut sapiente fugiat expedita tenetur magni sunt vero odit, eaque possimus?
 			</p> -->
@@ -56,10 +56,6 @@ import WhatWeOffer from '../components/WhatWeOffer.astro';
 	h1,h2,h3,h4,h5,h6 {
 		@apply text-center text-pretty px-4;
 	}
-
-	.hero {
-		height: calc(100dvh - 5rem);
-	}
 	
 	.icon {
 		@apply aspect-square;
@@ -72,6 +68,10 @@ import WhatWeOffer from '../components/WhatWeOffer.astro';
 	p {
 		@apply mb-3 text-pretty;
 
+	}
+
+	.hero {
+		height: calc(100dvh - 5rem);
 	}
 
 </style>
