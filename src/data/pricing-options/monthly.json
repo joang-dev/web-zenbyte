@@ -1,0 +1,10 @@
+{
+    "fullPrice": {"price": 100, "decimals": 99},
+    "pricingName": "Tarifa mensual",
+    "description": "Un mes intenso: ¡pura explosión de saber!",
+    "subjects": [
+        "Introducción al HTML",
+        "Fundamentos de programación",
+        "Anatomía práctica"
+    ]
+}

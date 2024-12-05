@@ -1,0 +1,43 @@
+---
+import { number } from "astro:schema"
+const {pricingOption} = Astro.props
+interface Pricing {
+  fullPrice: {
+    price: number;
+    decimals: number;
+  };
+  pricingName: string;
+  description: string;
+  subjects: string[];
+}
+
+const pricingOptions : Pricing = await import(`../data/pricing-options/${pricingOption}.json`)
+---
+
+<article class="grid grid-rows-subgrid md:justify-evenly row-span-4 gap-2">
+    <p class="relative font-bold text-center text-2xl text-orange-200 flex justify-center gap-2">
+        {pricingOptions.fullPrice.price}
+
+        <span class="relative -top-2 text-sm">
+            {pricingOptions.fullPrice.decimals}
+        </span>
+        <span>€</span>
+    </p>
+    <h2 class="text-semibold text-green-500 text-xl">
+        {pricingOptions.pricingName}
+    </h2>
+    <h4 class="opacity-75">
+        {pricingOptions.description}
+    </h4>
+    
+    <ul class="flex flex-col gap-4 justify-between">
+        {
+            pricingOptions.subjects.map(subject => (
+                <li>
+                    {subject}
+                </li>
+            ))
+        }
+    </ul>
+    
+</article>

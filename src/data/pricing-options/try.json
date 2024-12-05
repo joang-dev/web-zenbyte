@@ -1,0 +1,10 @@
+{
+    "fullPrice": {"price": 65, "decimals": 50},
+    "pricingName": "Tarifa demo",
+    "description": "Por si aún no estas convencido...",
+    "subjects": [
+        "Presentación de las instalaciones",
+        "Webinar incluido",
+        "Temario reducido"
+    ]
+}

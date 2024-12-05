@@ -1,0 +1,103 @@
+---
+// Astro component frontmatter
+const countryOptions = [
+  { code: 'ES', name: 'España', flag: '🇪🇸', dialCode: '+34' },
+  { code: 'MX', name: 'México', flag: '🇲🇽', dialCode: '+52' },
+  { code: 'AR', name: 'Argentina', flag: '🇦🇷', dialCode: '+54' },
+  { code: 'CO', name: 'Colombia', flag: '🇨🇴', dialCode: '+57' },
+  { code: 'PE', name: 'Perú', flag: '🇵🇪', dialCode: '+51' },
+  { code: 'CL', name: 'Chile', flag: '🇨🇱', dialCode: '+56' },
+  { code: 'EC', name: 'Ecuador', flag: '🇪🇨', dialCode: '+593' },
+  { code: 'VE', name: 'Venezuela', flag: '🇻🇪', dialCode: '+58' },
+];
+
+const pricingOptions = ['Anual', 'Mensual', 'Trimestral', 'Demo'];
+
+interface Props {
+  formTitle?: string;
+}
+
+const { formTitle = "Formulario de Compra" } = Astro.props;
+---
+
+<form id="buyForm" action="https://example.com" method="get" class="w-full mx-auto my-8 py-8 px-4 bg-stone-300 rounded-lg space-y-6 sm:space-y-8">
+  <h2 class="text-xl text-green-600 sm:text-2xl font-bold text-center">{formTitle}</h2>
+  
+  <div class="flex flex-col gap-6">
+    <fieldset class="w-full">
+        <legend class="text-lg text-black font-semibold mb-4">Información Personal</legend>
+        
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2 w-full">
+            <label for="name" class="text-sm font-medium text-gray-700">Nombre</label>
+            <input type="text" id="name" name="name" required
+                   class="w-full px-3 sm:px-4 py-2 bg-stone-800 text-white placeholder-gray-400 border rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                   placeholder="Tu nombre completo">
+          </div>
+          
+          <div class="flex flex-col w-full">
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required
+                   class="w-full px-3 sm:px-4 py-2 bg-stone-800 text-white placeholder-gray-400 border rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                   placeholder="tu@email.com"
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          </div>
+          
+          <div class="w-full">
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+            <div class="flex items-stretch w-full">
+              <select id="country-code" name="country-code" class="px-2 py-2 bg-stone-800 text-white border rounded-l-md focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                {countryOptions.map(country => (
+                  <option value={country.dialCode}>{country.flag} {country.dialCode}</option>
+                ))}
+              </select>
+              <input type="tel" id="phone" name="phone" required
+                     class="flex-1 px-3 sm:px-4 py-2 bg-stone-800 text-white placeholder-gray-400 border border-l-0 rounded-r-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                     placeholder="Número de teléfono">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      
+      
+    
+    <fieldset>
+      <legend class="text-lg text-black font-semibold mb-4">Detalles de la Compra</legend>
+      
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col">
+          <label for="country" class="block text-sm font-medium text-gray-700 mb-2">País</label>
+          <select id="country" name="country" required
+                  class="w-full px-3 sm:px-4 py-2 bg-stone-800 text-white border rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            {countryOptions.map(country => (
+              <option value={country.code}>{country.name}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div class="flex flex-col">
+          <label for="pricing" class="block text-sm font-medium text-gray-700 mb-2">Opción de Precio</label>
+          <select id="pricing" name="pricing" required
+                  class="w-full px-3 sm:px-4 py-2 bg-stone-800 text-white border rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            {pricingOptions.map(option => (
+              <option value={option}>{option}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+    </fieldset>
+    
+    <div class="flex flex-col">
+      <label for="referral" class="block text-sm font-medium text-gray-700 mb-2">¿Cómo nos encontraste?</label>
+      <textarea id="referral" name="referral" rows="3"
+                class="w-full px-3 sm:px-4 py-2 bg-stone-800 text-white placeholder-gray-400 border rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                placeholder="Cuéntanos cómo nos descubriste"></textarea>
+    </div>
+    
+    <div class="flex justify-center">
+      <button type="submit" class="w-full sm:w-auto px-6 py-2 bg-green-400 text-white rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-300 ease-in-out transform hover:scale-105">
+        Enviar
+      </button>
+    </div>
+  </div>
+</form>

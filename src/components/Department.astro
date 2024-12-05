@@ -10,18 +10,18 @@ const {department} = Astro.props
 const departments : Department = await import(`../data/departments/${department}.json`)
 ---
 
-<article class="py-4">
-    <h1 class="font-semibold text-2xl">{departments.departmentName}</h1>
-    <span class="text-xs text-green-500 font-extralight px-2 py-1 rounded-full border-green-500 border-2">{departments.workers}</span>
+<article class= "py-4 grid grid-cols-1 gap-4">
+    <h1 class="font-semibold text-2xl text-orange-200">{departments.departmentName}</h1>
+    <span class="text-xs w-fit justify-self-center text-green-500 font-extralight px-2 py-1 rounded-full border-green-500 border-2">{departments.workers}</span>
     <p>{departments.description}</p>
-    <ul>
+    <ol class="list-decimal py-2 px-4 flex flex-col gap-3">
         {
             departments.tasks.map(task => (
-                <li>
+                <li class="max-w-prose">
                     {task}
                 </li>
             ))
         }
-    </ul>
+    </ol>
     <slot />
 </article>

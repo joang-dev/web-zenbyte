@@ -1,7 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import PriceCard from "../components/PriceCard.astro"
+import BuyForm from "../components/BuyForm.astro"
+
+const pricingCards = [
+    "try",
+    "monthly",
+    "trimestral",
+    "yearly"
+]
 ---
 
 <Layout title="Tarifas y servicios">
-    
+    <h1 class="text-2xl font-bold mb-6">Nos adaptamos a ti</h1>
+
+    <div class="price-wrapper py-6">
+        {
+            pricingCards.map(card => (
+                <PriceCard pricingOption={card} />
+            ))
+        }
+    </div>
+
+    <BuyForm />
 </Layout>
+
+<style>
+    .price-wrapper {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+</style>

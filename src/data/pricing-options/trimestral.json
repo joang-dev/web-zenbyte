@@ -1,0 +1,10 @@
+{
+    "fullPrice": {"price": 275, "decimals": 20},
+    "pricingName": "Tarifa trimestral",
+    "description": "¿Interesado en sentar bases más sólidas?",
+    "subjects": [
+        "Paradigmas de programación",
+        "Salidas por la provincia",
+        "Meditación intermedia"
+    ]
+}
