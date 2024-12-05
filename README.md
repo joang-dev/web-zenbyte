@@ -1,48 +1,34 @@
-# Astro Starter Kit: Basics
+# 🏞️💻 Zenbyte: Fusión de Tecnología y Naturaleza
 
-```sh
-npm create astro@latest -- --template basics
-```
+## 📚 Sobre Nosotros
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+**Zenbyte** es una innovadora empresa educativa que combina la intensidad de los bootcamps de programación con la serenidad y los beneficios de las actividades al aire libre. Nuestra misión es formar desarrolladores integrales, equilibrando el aprendizaje técnico con el bienestar físico y mental.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎯 Objetivos del Proyecto
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+1. **Sitio Web Informativo**: Implementar una plataforma web rápida y responsive que refleje la esencia de Zenbyte.
+2. **Catálogo de Cursos**: Mostrar nuestros programas de estudio y actividades outdoor de manera atractiva.
+3. **Blog Educativo**: Compartir artículos sobre tecnología, programación y bienestar.
 
-## 🚀 Project Structure
+## 🛠️ Tecnologías Utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Astro** 🚀: Framework de generación de sitios estáticos para un rendimiento óptimo.
+- **Tailwind CSS** 🎨: Utilidad de CSS para un diseño rápido y personalizable.
+- **Markdown** 📝: Para la creación de contenido estructurado.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 📋 Características Principales
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+1. **Página de Inicio Dinámica**: Presentación atractiva de Zenbyte y sus programas.
+2. **Catálogo de Cursos Interactivo**: Detalles de nuestros bootcamps y actividades outdoor.
+3. **Blog Técnico y de Bienestar**: Artículos sobre programación y vida al aire libre.
+4. **Galería de Imágenes**: Showcasing de nuestras instalaciones y actividades.
+5. **Formulario de Contacto**: Para consultas y inscripciones.
 
-## 🧞 Commands
+## 🌱 Filosofía Zenbyte
 
-All commands are run from the root of the project, from a terminal:
+En Zenbyte, creemos firmemente en el poder transformador de la naturaleza como catalizador del aprendizaje. Nuestro enfoque único busca:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Fomentar la creatividad a través de entornos inspiradores 🏔️
+- Reducir el estrés y mejorar la concentración mediante actividades físicas 🧘
+- Desarrollar habilidades de trabajo en equipo en situaciones desafiantes 🤝
+- Promover un estilo de vida saludable y sostenible 🌿
