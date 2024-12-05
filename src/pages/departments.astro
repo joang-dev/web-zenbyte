@@ -1,8 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Department from "../components/Department.astro"
+
+const departments = [
+    "production",
+    "finances",
+    "marketing",
+    "rh"
+]
 ---
 
-<Layout>
-    <Department department="production" />
+<Layout title="Departamentos">
+    {
+        departments.map((department) => (
+            <Department department={department} />
+        ))
+    }
 </Layout>

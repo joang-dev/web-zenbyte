@@ -1,0 +1,12 @@
+{
+    "departmentName": "Finanzas",
+    "director": "Andrea Plauskaite",
+    "workers": "24 empleados",
+    "description": "En finanzas supervisamos los gastos y los ingresos, pero también...",
+    "tasks": [
+      "Revisamos los impuestos",
+      "Estudiamos la gráfica de ingresos",
+      "Supervisar los gastos con fines de ahorro económico y energético",
+      "Planeamos nuestras estrategias de inversión"
+      ]
+    }

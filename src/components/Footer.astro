@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon/components"
+import ZenbyteLogo from "./ZenbyteLogo.astro"
+
+const RRSS = [
+    "mdi:instagram",
+    "mdi:facebook",
+    "mdi:twitter"
+]
+
+const contact = [
+    {icon: "mdi:telephone", info: "+34 91 520 156 3"},
+    {icon: "mdi:email", info: "yourfuture@zenbyte.com"},
+    {icon: "mdi:location-radius", info: "Av. Finisterre, Ferrol. Galicia"}
+]
+---
+
+<footer class="
+text-xs
+bg-stone-300 py-6 px-4
+flex flex-col md:flex-row md:justify-around gap-8 items-center
+">
+    <div class="flex flex-col gap-4 items-center">
+        <ZenbyteLogo className="h-6 aspect-auto"/>
+        <ul class="w-full flex justify-between">
+            {
+                RRSS.map(social => (
+                    <a
+                    class="
+                    flex gap-2 hover:scale-105 transition-transform text-black"
+                    href="https://example.com"
+                    target="_blank">
+                    <Icon style={`font-size: 1.2rem`} name={social} />
+                    </a>
+                ))
+            }
+        </ul>
+    </div>
+    <div>
+        <ul class="flex flex-col gap-3">
+            {
+                contact.map(info => (
+                <li>
+                    <a
+                    class="
+                    flex gap-2 hover:scale-105 text-black transition-transform"
+                    href="https://example.com"
+                    target="_blank">
+                        <Icon style={`font-size: 1.2rem;`} name={info.icon} />
+                        {info.info}
+                    </a>
+                </li>
+                
+                ))
+            }
+        </ul>
+    </div>
+</footer>

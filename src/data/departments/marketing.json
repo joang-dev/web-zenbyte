@@ -1,0 +1,12 @@
+{
+    "departmentName": "Marketing",
+    "director": "David Escrihuela",
+    "workers": "18 empleados",
+    "description": "Desde marketing hacemos lo posible para llegar a vosotros:",
+    "tasks": [
+      "Analizamos el mercado",
+      "Aplicamos estudios para idear estrategias",
+      "Organizamos campañas publicitarias",
+      "Mantenemos al día nuestras redes"
+      ]
+    }

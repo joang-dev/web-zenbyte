@@ -1,0 +1,12 @@
+{
+    "departmentName": "Recursos Humanos",
+    "director": "Hector Ruescas",
+    "workers": "10 empleados",
+    "description": "Desde Recursos Humanos queremos que vosotros llegeis a nosotros:",
+    "tasks": [
+      "Elaboramos el perfil ideal de trabajador. ¿Serás tu?",
+      "Estudiamos las leyes para elaborar contratos correctos",
+      "Organizamos el calendario laboral",
+      "¡Te entrevistamos!"
+      ]
+    }

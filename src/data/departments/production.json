@@ -1,13 +1,11 @@
 {
-    "departmentName": "Producción",
-    "director": "Joan Grau",
-    "workers": "x empleados",
-    "description": "Este departamento se encarga de ...",
-    "tasks": [
-        "lorem",
-        "ipsum",
-        "dolor",
-        "sit",
-        "amet"
-    ]
+"departmentName": "Producción",
+"director": "Joan Grau",
+"workers": "30 empleados",
+"description": "Desde este departamento nos encargamos de aportar nuevas ideas al negocio, pero también...",
+"tasks": [
+  "Proponer excursiones y salidas",
+  "¡Organizamos las clases para que sean amenas y productivas!",
+  "Listamos el material necesario para las clases"
+  ]
 }
