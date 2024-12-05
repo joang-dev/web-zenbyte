@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^6.0.0",
+    "@astrojs/netlify": "^6.0.0",
     "@astrojs/tailwind": "5.1.2",
     "@iconify-json/mdi": "^1.2.1",
     "astro": "5.0.0",
     "astro-icon": "^1.1.4",
+    "netlify": "^13.1.21",
     "tailwindcss": "3.4.15"
   }
 }
