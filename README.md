@@ -1,5 +1,3 @@
-  Zenbyte: Fusión de Tecnología y Naturaleza body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; } header, section, footer { max-width: 800px; margin: 20px auto; padding: 10px; } header { text-align: center; } h1, h2, h3 { color: #2c3e50; } ul { list-style: none; padding: 0; } ul li::before { content: "🔹 "; color: #27ae60; } a { color: #3498db; text-decoration: none; } a:hover { text-decoration: underline; }
-
 🏞️💻 Zenbyte: Fusión de Tecnología y Naturaleza
 ================================================
 
