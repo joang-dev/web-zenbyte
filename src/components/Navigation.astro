@@ -13,9 +13,9 @@ const items = [
 <nav
 id="page-navigation"
 class={`
-flex flex-col py-4 h-full
+hidden flex-col py-4 h-full
 fixed top-20 right-0 bg-stone-800/70 backdrop-blur-sm
-font-extralight translate-x-full opacity-0 transition-all duration-300
+font-extralight
 `
 }>
     <ul class="flex flex-col overflow-y-auto gap-8">
@@ -33,7 +33,7 @@ font-extralight translate-x-full opacity-0 transition-all duration-300
     }
 
     .show {
-        @apply translate-x-0 opacity-100;
+        @apply flex;
     }
 
     @media (width > 48rem) {
